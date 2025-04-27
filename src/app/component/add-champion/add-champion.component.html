@@ -1,0 +1,56 @@
+<p>add-champion works!</p>
+<form [formGroup]="empForm" (ngSubmit)=" saveChampion()" class="p-2">
+    <!--Esto significa que cuando presiones un botón de tipo submit, se ejecuta automáticamente saveChampion().-->
+    <mat-card>
+        <mat-card-header>
+            <h2>{{ title }}</h2>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label>Campeon Id: </mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>nombre: </mat-label>
+                <input matInput formControlName="nameC">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>rol del campeon: </mat-label>
+
+                <mat-select formControlName="rolC">
+
+                    <mat-option value="">selecciona un rol</mat-option>
+                    <mat-option value="jungla">jungla</mat-option>
+                    <mat-option value="soporte">soporte</mat-option>
+                    <mat-option value="adc">adc</mat-option>
+                    <mat-option value="top">top</mat-option>
+                    <mat-option value="mid">mid</mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>historia del campeon: </mat-label>
+                <input matInput formControlName="history">
+            </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="bg-purple-600 p-4 rounded-full w-32 text-white font-bold " typpe="submit">
+                guardar
+            </button>
+            <button class="bg-red-600 p-4 rounded-full w-32 text-white font-bold" (click)="closepopup()">
+                cerrar
+            </button>
+
+            <button type="submit" mat-raised-button color="primary" (click)="saveChampion()">
+                Guardar
+            </button>
+
+        </mat-card-actions>
+    </mat-card>
+</form>
