@@ -9,18 +9,18 @@
         <mat-card-content>
             <mat-form-field appearance="fill">
                 <mat-label>Campeon Id: </mat-label>
-                <input matInput formControlName="id">
+                <input matInput formControlName="id"> <!-- esos nombres DEBEN COINCIDIR CON su .ts empForm-->
             </mat-form-field>
 
             <mat-form-field appearance="fill">
                 <mat-label>nombre: </mat-label>
-                <input matInput formControlName="nameC">
+                <input matInput formControlName="name_C">
             </mat-form-field>
 
             <mat-form-field appearance="fill">
                 <mat-label>rol del campeon: </mat-label>
 
-                <mat-select formControlName="rolC">
+                <mat-select formControlName="rol_C">
 
                     <mat-option value="">selecciona un rol</mat-option>
                     <mat-option value="jungla">jungla</mat-option>
@@ -40,7 +40,7 @@
 
         </mat-card-content>
         <mat-card-actions>
-            <button class="bg-purple-600 p-4 rounded-full w-32 text-white font-bold " typpe="submit">
+            <button class="bg-purple-600 p-4 rounded-full w-32 text-white font-bold " type="submit">
                 guardar
             </button>
             <button class="bg-red-600 p-4 rounded-full w-32 text-white font-bold" (click)="closepopup()">

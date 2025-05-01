@@ -1,18 +1,58 @@
 
-
 <mat-card>
     <mat-card-header>
+
         <h2 class="font-bold">Lista de campeones</h2>
         <button class="bg-green-500 p-4 rounded-lg text-white" (click)="addChampion()" >
             añadir un nuevo campeon
         </button>
 
-
     </mat-card-header>
 
     <mat-card-content>
-        <p>este es el contenido del card</p>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
 
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name_C">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name_C}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="rol_C">
+                <th mat-header-cell *matHeaderCellDef> Rol </th>
+                <td mat-cell *matCellDef="let element"> {{element.rol_C}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="history">
+                <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+                <td mat-cell *matCellDef="let element"> {{element.history}} </td>
+            </ng-container> 
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                <td mat-cell *matCellDef="let element">
+                    <button  class="p-2 rounded-full bg-blue-500 text-white w-24"
+                    type="submit" (click)="editChampion(element.id)"> editar </button>
+                    <!--el elemnet.id (su id es sacado del interface)-->
+                    
+                    <button class="p-2 rounded-full bg-red-500 text-white w-24"
+                    type="submit" (click)="deleteChampion(element.id)"> eliminar </button>
+                </td>
+            </ng-container> 
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
     </mat-card-content>
 </mat-card> 
 

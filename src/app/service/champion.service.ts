@@ -8,21 +8,34 @@ export class ChampionService {
 
   apiUrl = 'http://localhost:3000/champion';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
-  getAll(){
+  getAll() {
     return this.http.get<ChampionI[]>(this.apiUrl);
   }
 
-
-  get(idC: number){
-    return this.http.get<ChampionI>(this.apiUrl + '/' + idC);
+  get(id_C: number) {
+    return this.http.get<ChampionI>(this.apiUrl + '/' + id_C);
   }
 
+  create(data: ChampionI) {
+    console.log(data.id + " fue creado");
+    console.log(data.name_C + " fue creado");
+    return this.http.post(this.apiUrl, data);
+  }
 
-  create(data: ChampionI){
-    return this.http.post(this.apiUrl,data);
+  delete(empId: number) {
+    console.log(empId + " fue eliminado");
+    
+    return this.http.delete(this.apiUrl + '/' + empId);
+  }
+
+  update(data: ChampionI) {
+    console.log(data.id + " fue actualizado");
+    console.log(data.name_C + " fue actualizado");
+
+    return this.http.put(this.apiUrl + '/' + data.id, data);
   }
 
 

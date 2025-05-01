@@ -2,7 +2,7 @@
 
 export interface ChampionI {
     id : number;
-    nameC : string;
-    rolC: string;
+    name_C : string;
+    rol_C: string;
     history: string;
 }

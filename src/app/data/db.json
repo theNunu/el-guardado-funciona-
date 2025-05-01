@@ -1,58 +1,46 @@
 {
   "champion": [
     {
-      "id": "u",
-      "nameC": "mm",
-      "rolC": "jungla",
-      "history": "mhmh"
+      "id": "1",
+      "name_C": "garen  actualizado",
+      "rol_C": "top",
+      "history": "demacia"
     },
     {
-      "id": "u",
-      "nameC": "mm",
-      "rolC": "jungla",
-      "history": "mhmh"
+      "id": "8667",
+      "name_C": "eso tilin update",
+      "rol_C": "jungla",
+      "history": "nnnnnnnnnnn"
     },
     {
-      "id": "7",
-      "nameC": "tjtj",
-      "rolC": "mid",
-      "history": "jjj"
+      "id": "79",
+      "name_C": "alexis",
+      "rol_C": "mid",
+      "history": "siguo sin ser un camepon"
     },
     {
-      "id": "7",
-      "nameC": "tjtj",
-      "rolC": "mid",
-      "history": "jjj"
+      "id": "67",
+      "name_C": "wazaa",
+      "rol_C": "adc",
+      "history": "buen momo"
     },
     {
-      "id": "8",
-      "nameC": "jtjtj",
-      "rolC": "top",
-      "history": "tjt"
+      "id": "98",
+      "name_C": "mordekaiser",
+      "rol_C": "top",
+      "history": "es un castroso lo odio con toda mi sfuerzas"
     },
     {
-      "id": "8",
-      "nameC": "jtjtj",
-      "rolC": "top",
-      "history": "tjt"
+      "id": "65",
+      "name_C": "dr mundo",
+      "rol_C": "top",
+      "history": "aguanta mucho"
     },
     {
-      "id": "7",
-      "nameC": "yyry",
-      "rolC": "soporte",
-      "history": "pppppppppppppppppppppppp"
-    },
-    {
-      "id": "7",
-      "nameC": "yyry",
-      "rolC": "soporte",
-      "history": "pppppppppppppppppppppppp"
-    },
-    {
-      "id": "2",
-      "nameC": "maestro yi",
-      "rolC": "mid",
-      "history": "es peligrosooo"
+      "id": "76",
+      "name_C": "jinx mejorada",
+      "rol_C": "soporte",
+      "history": "esta locaaaa"
     }
   ]
 }
