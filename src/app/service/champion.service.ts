@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { ChampionI } from '../model/Champion';
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,7 @@ export class ChampionService {
   create(data: ChampionI) {
     console.log(data.id + " fue creado");
     console.log(data.name_C + " fue creado");
+    console.log( "imagen guardada: " + data.fotoBase64);
     return this.http.post(this.apiUrl, data);
   }
 
@@ -37,6 +39,10 @@ export class ChampionService {
 
     return this.http.put(this.apiUrl + '/' + data.id, data);
   }
+
+  // enviarFormulario(formData: FormData): Observable<any> {
+  //   return this.http.post(this.apiUrl, formData);
+  // }
 
 
   // GetAll(){

@@ -37,6 +37,13 @@
                 <td mat-cell *matCellDef="let element"> {{element.history}} </td>
             </ng-container> 
 
+            <ng-container matColumnDef="fotoBase64" class="p-2">
+                <th mat-header-cell *matHeaderCellDef> Imagen del Campeón </th>
+                <td mat-cell *matCellDef="let element">
+                    <img [src]="element.fotoBase64" alt="Imagen del campeón" class="size-32 rounded-xl"/>
+                </td>
+            </ng-container>
+
             <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef> Acciones </th>
                 <td mat-cell *matCellDef="let element">

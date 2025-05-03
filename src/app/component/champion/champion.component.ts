@@ -34,7 +34,7 @@ export class ChampionComponent implements OnInit, OnDestroy {
 
   empList: ChampionI[] = []; // lista de campeones
   dataSource!: MatTableDataSource<ChampionI>; // la interface ChampionI
-  displayedColumns: string[] = ['id', 'name_C', 'rol_C', 'history', 'action']; // columnas de la tabla para el frotend(icluyendo botones)
+  displayedColumns: string[] = ['id', 'name_C', 'rol_C', 'history','fotoBase64', 'action']; // columnas de la tabla para el frotend(icluyendo botones)
   subscription = new Subscription();
 
   getAllChampion() { // trae funciones del service
